@@ -389,3 +389,16 @@ footer {
         flex-direction: column;
     }
 }
+
+/* ---------- Visitor Counter ---------- */
+
+.visitor-counter {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.visitor-counter strong {
+    color: #ffffff;
+    font-variant-numeric: tabular-nums;
+}
