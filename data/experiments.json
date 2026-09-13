@@ -1,0 +1,22 @@
+﻿{
+  "title": "Experiments",
+  "description": "Experiments and studies are organized by evidence type so that computational, simulated, and hardware results remain explicitly distinguishable.",
+  "evidence_types": [
+    {
+      "id": "simulation",
+      "name": "Simulations",
+      "description": "Model-based studies in which results are generated from defined computational or mathematical models rather than direct physical measurement."
+    },
+    {
+      "id": "computational",
+      "name": "Computational Studies",
+      "description": "Software-based experiments, benchmarks, numerical analysis, pattern discovery, and other reproducible computational investigations."
+    },
+    {
+      "id": "hardware",
+      "name": "Hardware Validation",
+      "description": "Physical measurements and hardware tests intended to compare implemented systems with their corresponding models or design expectations."
+    }
+  ],
+  "records": []
+}

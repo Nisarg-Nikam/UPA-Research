@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UPA Research experiments — simulations, computational studies, and hardware validation.">
+<title>Experiments — UPA Research</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.experiments-page{padding:56px 0 80px}.experiments-intro{max-width:820px;margin-bottom:42px}
+.evidence-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.evidence-card{background:#fff;border:1px solid #d9e0e7;border-radius:10px;padding:28px;box-shadow:0 8px 24px rgba(15,35,55,.06)}
+.evidence-card h2{margin-top:0}.evidence-meta{font-size:.9rem;color:#5c6b78;margin-bottom:16px}
+.evidence-note{margin-top:42px;padding:20px 24px;border-left:4px solid #2f5f86;background:#f4f7fa}
+.records-empty{margin-top:28px;padding:22px 24px;background:#fff;border:1px dashed #b9c7d4;border-radius:10px;color:#465665}
+</style>
+</head>
+<body>
+<header><div class="container">
+<a class="brand" href="../index.html">UPA Research</a>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../research/">Research</a>
+<a href="../applications/">Applications</a>
+<a href="index.html" aria-current="page">Experiments</a>
+<a href="../index.html#patents">Patents</a>
+<a href="../index.html#contact">Contact</a>
+</nav>
+</div></header>
+
+<main class="experiments-page"><div class="container">
+<div class="experiments-intro">
+<p class="eyebrow">EVIDENCE &amp; STUDIES</p>
+<h1>Experiments</h1>
+<p id="experiments-description"></p>
+<p>Research claims will be associated with the evidence that supports them. A simulation is not presented as a physical experiment, and a computational result is not presented as independent validation unless such validation has actually been performed.</p>
+</div>
+
+<section><div id="evidence-grid" class="evidence-grid"></div></section>
+<section><div id="records"></div></section>
+
+<div class="evidence-note">
+<strong>Evidence discipline:</strong> an empty experiment registry means that no specific experiment record has been published here yet. Records will be added as studies are documented.
+</div>
+</div></main>
+
+<footer><div class="container footer-content">
+<span>© 2026 UPA Research</span><span>Universal Pattern Application</span>
+</div></footer>
+
+<script>
+fetch("../data/experiments.json",{cache:"no-store"})
+.then(r=>{if(!r.ok)throw Error();return r.json()})
+.then(data=>{
+ document.getElementById("experiments-description").textContent=data.description||"";
+ const grid=document.getElementById("evidence-grid");
+ (data.evidence_types||[]).forEach(type=>{
+   const card=document.createElement("article");
+   card.className="evidence-card";
+   card.innerHTML=`<div class="evidence-meta">Evidence type</div><h2>${type.name}</h2><p>${type.description}</p>`;
+   grid.appendChild(card);
+ });
+ const records=document.getElementById("records");
+ if(!data.records||!data.records.length){
+   records.innerHTML='<div class="records-empty"><strong>No published experiment records yet.</strong><p>The registry is ready for documented simulations, computational studies, and hardware validation records.</p></div>';
+ }
+})
+.catch(()=>{document.getElementById("evidence-grid").innerHTML="<p>Experiments data is temporarily unavailable.</p>";});
+</script>
+</body>
+</html>
