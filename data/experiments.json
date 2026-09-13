@@ -1,22 +1,97 @@
 ﻿{
-  "title": "Experiments",
-  "description": "Experiments and studies are organized by evidence type so that computational, simulated, and hardware results remain explicitly distinguishable.",
-  "evidence_types": [
-    {
-      "id": "simulation",
-      "name": "Simulations",
-      "description": "Model-based studies in which results are generated from defined computational or mathematical models rather than direct physical measurement."
-    },
-    {
-      "id": "computational",
-      "name": "Computational Studies",
-      "description": "Software-based experiments, benchmarks, numerical analysis, pattern discovery, and other reproducible computational investigations."
-    },
-    {
-      "id": "hardware",
-      "name": "Hardware Validation",
-      "description": "Physical measurements and hardware tests intended to compare implemented systems with their corresponding models or design expectations."
-    }
-  ],
-  "records": []
+    "title":  "Experiments",
+    "description":  "Experiments and studies are organized by evidence type so that computational, simulated, and hardware results remain explicitly distinguishable.",
+    "evidence_types":  [
+                           {
+                               "id":  "simulation",
+                               "name":  "Simulations",
+                               "description":  "Model-based studies in which results are generated from defined computational or mathematical models rather than direct physical measurement."
+                           },
+                           {
+                               "id":  "computational",
+                               "name":  "Computational Studies",
+                               "description":  "Software-based experiments, benchmarks, numerical analysis, pattern discovery, and other reproducible computational investigations."
+                           },
+                           {
+                               "id":  "hardware",
+                               "name":  "Hardware Validation",
+                               "description":  "Physical measurements and hardware tests intended to compare implemented systems with their corresponding models or design expectations."
+                           }
+                       ],
+    "records":  [
+                    {
+                        "id":  "EXP-INFRA-001",
+                        "title":  "UPA Research Website Persistent Load Benchmark",
+                        "type":  "computational",
+                        "status":  "Completed",
+                        "date":  "2026-09-13",
+                        "research":  [
+
+                                     ],
+                        "applications":  [
+
+                                         ],
+                        "evidence_class":  "Observed computational / infrastructure benchmark",
+                        "description":  "A homepage-only HTTP benchmark using persistent connections to evaluate delivery behavior at increasing client concurrency.",
+                        "method":  {
+                                       "target":  "https://upa-research.pages.dev/",
+                                       "scope":  "Homepage only",
+                                       "visitor_api_called":  false,
+                                       "concurrency_levels":  [
+                                                                  64,
+                                                                  256,
+                                                                  512,
+                                                                  1024
+                                                              ],
+                                       "requests_per_client":  3,
+                                       "client_model":  "One test machine/network using concurrent persistent HTTP clients"
+                                   },
+                        "results":  [
+                                        {
+                                            "concurrent_clients":  64,
+                                            "total_requests":  192,
+                                            "http_200":  192,
+                                            "failures":  0,
+                                            "throughput_req_per_sec":  40.8,
+                                            "average_latency_sec":  0.393,
+                                            "maximum_latency_sec":  1.954
+                                        },
+                                        {
+                                            "concurrent_clients":  256,
+                                            "total_requests":  768,
+                                            "http_200":  768,
+                                            "failures":  0,
+                                            "throughput_req_per_sec":  48.09,
+                                            "average_latency_sec":  0.38,
+                                            "maximum_latency_sec":  1.438
+                                        },
+                                        {
+                                            "concurrent_clients":  512,
+                                            "total_requests":  1536,
+                                            "http_200":  1536,
+                                            "failures":  0,
+                                            "throughput_req_per_sec":  46.95,
+                                            "average_latency_sec":  0.443,
+                                            "maximum_latency_sec":  1.826
+                                        },
+                                        {
+                                            "concurrent_clients":  1024,
+                                            "total_requests":  3072,
+                                            "http_200":  3072,
+                                            "failures":  0,
+                                            "throughput_req_per_sec":  49.6,
+                                            "average_latency_sec":  0.422,
+                                            "maximum_latency_sec":  1.902
+                                        }
+                                    ],
+                        "interpretation":  "The benchmark observed 100% HTTP 200 responses at 1,024 concurrent persistent clients under the stated test conditions.",
+                        "limitations":  [
+                                            "All connections originated from one machine/network.",
+                                            "The benchmark does not represent 1,024 independent human visitors.",
+                                            "The benchmark does not represent 1,024 independent browser sessions.",
+                                            "The test targeted the homepage only and did not exercise the visitor-counter API or D1 writes.",
+                                            "Results describe this test run and should not be treated as a general capacity guarantee."
+                                        ]
+                    }
+                ]
 }
