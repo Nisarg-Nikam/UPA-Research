@@ -1,0 +1,48 @@
+﻿{
+  "title": "UPA Research",
+  "description": "Research organized through the UPA Grid for traceability, segmentation, and cross-linking.",
+  "projects": [
+    {
+      "id": "upa-core",
+      "name": "UPA Core",
+      "category": "Research Architecture",
+      "status": "Research Active",
+      "summary": "The conceptual and methodological foundation of Universal Pattern Application, including parametric representation, pattern matching, structured state spaces, and traceable application workflows.",
+      "evidence": "Framework / conceptual research",
+      "links": {
+        "experiments": [],
+        "applications": [],
+        "publications": [],
+        "patents": []
+      }
+    },
+    {
+      "id": "pag",
+      "name": "PAG — Pattern Atlas Generator",
+      "category": "Computational Research",
+      "status": "Development Active",
+      "summary": "A research platform for generating, detecting, analyzing, and cataloguing recurring arithmetic and digit patterns to build a Pattern Atlas.",
+      "evidence": "Computational research platform",
+      "links": {
+        "experiments": [],
+        "applications": [],
+        "publications": [],
+        "patents": []
+      }
+    },
+    {
+      "id": "paal",
+      "name": "PAAL — Pattern-Adaptive Arithmetic Library",
+      "category": "Computational Research",
+      "status": "Research / Development",
+      "summary": "A proposed arithmetic-library approach that identifies structured numerical families and uses exact formulas or compact lookup structures where appropriate.",
+      "evidence": "Concept / computational research",
+      "links": {
+        "experiments": [],
+        "applications": [],
+        "publications": [],
+        "patents": []
+      }
+    }
+  ]
+}
