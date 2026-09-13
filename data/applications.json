@@ -1,0 +1,54 @@
+﻿{
+  "title": "Applications",
+  "description": "Application areas where UPA Research is being explored through domain-specific implementations and studies.",
+  "areas": [
+    {
+      "id": "power-control",
+      "name": "Power & Control",
+      "status": "Research Active",
+      "summary": "Parametric approaches to power conversion, control, operating surfaces, and related system-level studies.",
+      "research": ["upa-core"],
+      "evidence": "Research / application development"
+    },
+    {
+      "id": "computing-vlsi",
+      "name": "Computing & VLSI",
+      "status": "Research Active",
+      "summary": "Exploration of UPA concepts for computing architectures, VLSI design, arithmetic structures, and processor-level organization.",
+      "research": ["upa-core", "pag", "paal"],
+      "evidence": "Concept / computational research"
+    },
+    {
+      "id": "acoustics",
+      "name": "Acoustics",
+      "status": "Application Development",
+      "summary": "Application of parametric design principles to acoustic systems, including UPA-designed speaker research.",
+      "research": ["upa-core"],
+      "evidence": "Design / application research"
+    },
+    {
+      "id": "sensors",
+      "name": "Sensors",
+      "status": "Research Active",
+      "summary": "Parametric sensing and signal-interpretation research across physical and measurement systems.",
+      "research": ["upa-core"],
+      "evidence": "Research / simulation where applicable"
+    },
+    {
+      "id": "rf-antenna",
+      "name": "RF & Antenna",
+      "status": "Research / Development",
+      "summary": "Exploration of parametric structures and operating conditions for RF and antenna-related systems.",
+      "research": ["upa-core"],
+      "evidence": "Concept / design research"
+    },
+    {
+      "id": "parametric-systems",
+      "name": "Parametric Systems",
+      "status": "Research Active",
+      "summary": "General application of UPA's parametric representation and pattern-oriented organization to engineered systems.",
+      "research": ["upa-core", "pag", "paal"],
+      "evidence": "Framework / application research"
+    }
+  ]
+}
