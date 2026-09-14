@@ -1,0 +1,24 @@
+﻿{
+  "title": "Patents",
+  "description": "Public-facing patent information associated with UPA Research. Only filed or otherwise appropriate public metadata is presented here; unpublished technical details are not disclosed.",
+  "records": [
+    {
+      "id": "PAT-UPA-001",
+      "title": "Adaptive Power Conversion Architecture with Parametric Operating-Surface Based Digital Control",
+      "jurisdiction": "India",
+      "application_number": "202621100992",
+      "filing_date": "2026-08-21",
+      "status": "Filed",
+      "type": "Ordinary Application — Provisional Specification",
+      "public_disclosure": "Filed application metadata and high-level subject description",
+      "summary": "A filed UPA-related patent application concerning an adaptive power-conversion architecture using parametric operating-surface based digital control.",
+      "evidence_note": "Patent filing status is reported separately from research evidence and does not by itself establish technical performance.",
+      "links": {
+        "research": ["upa-core"],
+        "applications": ["power-control"],
+        "experiments": []
+      }
+    }
+  ],
+  "unpublished_note": "Additional UPA patent work may be under development or not yet publicly disclosed. No unpublished application numbers, claims, drawings, enabling technical details, or confidential development material are listed here."
+}

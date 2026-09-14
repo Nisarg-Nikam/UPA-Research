@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UPA Research patents — public filing information and patent program.">
+    <title>Patents — UPA Research</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .patents-page { padding: 56px 0 80px; }
+        .patents-intro { max-width: 820px; margin-bottom: 42px; }
+        .patent-records { display: grid; gap: 24px; }
+        .patent-card { background: #fff; border: 1px solid #d9e0e7; border-radius: 10px; padding: 30px; box-shadow: 0 8px 24px rgba(15,35,55,.06); }
+        .patent-id { font-size: .8rem; color: #5c6b78; letter-spacing: .05em; margin-bottom: 10px; }
+        .patent-status { display: inline-block; border: 1px solid #b9c7d4; border-radius: 999px; padding: 5px 10px; font-size: .8rem; margin-bottom: 18px; }
+        .patent-meta { display: grid; grid-template-columns: minmax(170px,220px) 1fr; gap: 9px 18px; margin: 22px 0; }
+        .patent-meta dt { font-weight: 600; color: #465665; }
+        .patent-meta dd { margin: 0; }
+        .patent-note { margin-top: 26px; padding-top: 20px; border-top: 1px solid #e3e8ed; }
+        .patent-disclosure { margin-top: 42px; padding: 20px 24px; border-left: 4px solid #2f5f86; background: #f4f7fa; }
+        .patent-unpublished { margin-top: 24px; padding: 22px 24px; border: 1px dashed #b9c7d4; border-radius: 10px; background: #fff; }
+        @media (max-width:700px) { .patent-meta { grid-template-columns:1fr; } .patent-meta dd { margin-bottom:8px; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a class="brand" href="../index.html">UPA Research</a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../research/">Research</a>
+            <a href="../applications/">Applications</a>
+            <a href="../experiments/">Experiments</a>
+            <a href="index.html" aria-current="page">Patents</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="patents-page">
+    <div class="container">
+        <div class="patents-intro">
+            <p class="eyebrow">INTELLECTUAL PROPERTY</p>
+            <h1>Patents</h1>
+            <p id="patents-description"></p>
+            <p>Patent records are presented as intellectual-property metadata and high-level subject descriptions. Filing status is kept distinct from experimental evidence, technical validation, and publication status.</p>
+        </div>
+
+        <section id="patent-records" class="patent-records"></section>
+
+        <div class="patent-disclosure">
+            <strong>Public-disclosure discipline:</strong> this page does not publish unpublished claims, enabling technical details, confidential drawings, or other material that has not been intentionally made public.
+        </div>
+
+        <div id="unpublished-note" class="patent-unpublished"></div>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <span>© 2026 UPA Research</span>
+        <span>Universal Pattern Application</span>
+    </div>
+</footer>
+
+<script>
+fetch("../data/patents.json", { cache: "no-store" })
+    .then(response => {
+        if (!response.ok) throw new Error("Patent data unavailable");
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById("patents-description").textContent = data.description || "";
+        const records = document.getElementById("patent-records");
+
+        (data.records || []).forEach(record => {
+            const card = document.createElement("article");
+            card.className = "patent-card";
+            card.innerHTML = `
+                <div class="patent-id">${record.id || "Patent record"}</div>
+                <span class="patent-status">${record.status || "Status not specified"}</span>
+                <h2>${record.title || "Untitled patent record"}</h2>
+                <p>${record.summary || ""}</p>
+                <dl class="patent-meta">
+                    <dt>Jurisdiction</dt><dd>${record.jurisdiction || "—"}</dd>
+                    <dt>Application number</dt><dd>${record.application_number || "—"}</dd>
+                    <dt>Filing date</dt><dd>${record.filing_date || "—"}</dd>
+                    <dt>Application type</dt><dd>${record.type || "—"}</dd>
+                    <dt>Public disclosure</dt><dd>${record.public_disclosure || "—"}</dd>
+                </dl>
+                <div class="patent-note">
+                    <strong>Evidence boundary:</strong> ${record.evidence_note || "Patent status is distinct from technical evidence."}
+                </div>
+            `;
+            records.appendChild(card);
+        });
+
+        if (!records.children.length) {
+            records.innerHTML = "<p>No public patent records are currently listed.</p>";
+        }
+
+        document.getElementById("unpublished-note").innerHTML =
+            `<strong>Unpublished material:</strong> ${data.unpublished_note || "No unpublished patent information is displayed."}`;
+    })
+    .catch(() => {
+        document.getElementById("patent-records").innerHTML =
+            "<p>Patent data is temporarily unavailable.</p>";
+    });
+</script>
+</body>
+</html>
