@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UPA Research patents — public filing information and patent program.">
-    <title>Patents — UPA Research</title>
+    <meta name="description" content="UPA Research patents â€” public filing information and patent program.">
+    <title>Patents - UPA Research</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .patents-page { padding: 56px 0 80px; }
@@ -21,6 +21,7 @@
         .patent-unpublished { margin-top: 24px; padding: 22px 24px; border: 1px dashed #b9c7d4; border-radius: 10px; background: #fff; }
         @media (max-width:700px) { .patent-meta { grid-template-columns:1fr; } .patent-meta dd { margin-bottom:8px; } }
     </style>
+<script src="../js/responsive.js" defer></script>
 </head>
 <body>
 <header>
@@ -58,7 +59,7 @@
 
 <footer>
     <div class="container footer-content">
-        <span>© 2026 UPA Research</span>
+        <span>&copy; 2026 UPA Research</span>
         <span>Universal Pattern Application</span>
     </div>
 </footer>
@@ -82,11 +83,13 @@ fetch("../data/patents.json", { cache: "no-store" })
                 <h2>${record.title || "Untitled patent record"}</h2>
                 <p>${record.summary || ""}</p>
                 <dl class="patent-meta">
-                    <dt>Jurisdiction</dt><dd>${record.jurisdiction || "—"}</dd>
-                    <dt>Application number</dt><dd>${record.application_number || "—"}</dd>
-                    <dt>Filing date</dt><dd>${record.filing_date || "—"}</dd>
-                    <dt>Application type</dt><dd>${record.type || "—"}</dd>
-                    <dt>Public disclosure</dt><dd>${record.public_disclosure || "—"}</dd>
+                    <dt>Jurisdiction</dt><dd>${record.jurisdiction || "-"}</dd>
+                    <dt>Application number</dt><dd>${record.application_number || "-"}</dd>
+                    <dt>CBR number</dt><dd>${record.cbr_number || "-"}</dd>
+                    <dt>CBR date</dt><dd>${record.cbr_date || "-"}</dd>
+                    <dt>Filing date</dt><dd>${record.filing_date || "-"}</dd>
+                    <dt>Application type</dt><dd>${record.type || "-"}</dd>
+                    <dt>Public disclosure</dt><dd>${record.public_disclosure || "-"}</dd>
                 </dl>
                 <div class="patent-note">
                     <strong>Evidence boundary:</strong> ${record.evidence_note || "Patent status is distinct from technical evidence."}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hybrid Spatial Index Boundary Query Benchmark — UPA Research experiment record.">
+<title>WEB-EXP-008 — UPA Research</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.experiment-detail{padding:56px 0 80px}.experiment-detail .container{max-width:900px}
+.experiment-card{background:#fff;border:1px solid #d9e0e7;border-radius:10px;padding:32px;box-shadow:0 8px 24px rgba(15,35,55,.06)}
+.experiment-id{font:600 .8rem ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em;color:#2f5f86}
+.experiment-meta{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#52606d;margin:14px 0 24px}
+.metric-table{width:100%;border-collapse:collapse;margin:14px 0 22px;font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
+.metric-table th,.metric-table td{border:1px solid #d9e0e7;padding:8px;text-align:left}.metric-table th{width:38%;background:#f4f7fa}
+.falsification-warning{margin:24px 0;padding:16px 18px;border-left:4px solid #8a4b08;background:#fff7ed}
+section{margin-top:30px}.note{color:#52606d;font-size:.9rem}
+</style>
+<script src="../js/responsive.js" defer></script>
+</head>
+<body>
+<header><div class="container"><a class="brand" href="../index.html">UPA Research</a><nav>
+<a href="../index.html">Home</a><a href="../research/">Research</a><a href="../applications/">Applications</a><a href="../experiments/">Experiments</a><a href="../patents/">Patents</a><a href="../index.html#contact">Contact</a>
+</nav></div></header>
+<main class="experiment-detail"><div class="container">
+<p class="eyebrow">EXPERIMENT RECORD</p>
+<div class="experiment-card">
+<div class="experiment-id">WEB-EXP-008</div>
+<h1>Hybrid Spatial Index Boundary Query Benchmark</h1>
+<div class="experiment-meta">Evidence: [B] Hardware Benchmark · Status: Completed · Date: 2026-09-13</div>
+<p>Hardware benchmark of a boundary query using a Mulberry32 pseudo-random sequence with seed 424242 and N=100,000.</p>
+
+<section><h2>Reported result</h2><table class="metric-table"><tr><th>candidate_count</th><td>100000</td></tr>
+<tr><th>boundary_query_ms</th><td>0.481</td></tr>
+<tr><th>operating_window</th><td>K ∈ [32, 256]</td></tr></table></section>
+<section><h2>Interpretation</h2><p>The reported result supports the hypothesis that sub-tree promotion can avoid candidate-array scanning bottlenecks under the tested conditions.</p></section>
+<section><h2>Limitations</h2><ul><li>The result is specific to the reported implementation and test conditions.</li>
+<li>A benchmark result is not a universal performance guarantee.</li>
+<li>The operating window K ∈ [32, 256] is reported as an observed benchmark window, not a theorem.</li>
+<li>True raw execution logs must be supplied separately if external reviewers are to reproduce the exact run trace.</li></ul></section>
+<section>
+<h2>Published result exports</h2>
+<p>These files contain the benchmark values published in the registry. They are <strong>result exports, not raw execution logs</strong>.</p>
+<ul>
+<li><a href="../data/benchmarks/WEB-EXP-008.json">JSON result export</a></li>
+<li><a href="../data/benchmarks/WEB-EXP-008.csv">CSV result export</a></li>
+</ul>
+<p class="note">Raw logs are not represented here unless the original execution-log files are supplied.</p>
+</section>
+</div></div></main>
+<footer><div class="container footer-content"><span>© 2026 UPA Research</span><span>Universal Pattern Application</span></div></footer>
+</body></html>

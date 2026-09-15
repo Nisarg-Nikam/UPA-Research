@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dense DOM Spatial Distribution Failure Benchmark — UPA Research experiment record.">
+<title>WEB-EXP-009 — UPA Research</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.experiment-detail{padding:56px 0 80px}.experiment-detail .container{max-width:900px}
+.experiment-card{background:#fff;border:1px solid #d9e0e7;border-radius:10px;padding:32px;box-shadow:0 8px 24px rgba(15,35,55,.06)}
+.experiment-id{font:600 .8rem ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em;color:#2f5f86}
+.experiment-meta{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#52606d;margin:14px 0 24px}
+.metric-table{width:100%;border-collapse:collapse;margin:14px 0 22px;font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
+.metric-table th,.metric-table td{border:1px solid #d9e0e7;padding:8px;text-align:left}.metric-table th{width:38%;background:#f4f7fa}
+.falsification-warning{margin:24px 0;padding:16px 18px;border-left:4px solid #8a4b08;background:#fff7ed}
+section{margin-top:30px}.note{color:#52606d;font-size:.9rem}
+</style>
+<script src="../js/responsive.js" defer></script>
+</head>
+<body>
+<header><div class="container"><a class="brand" href="../index.html">UPA Research</a><nav>
+<a href="../index.html">Home</a><a href="../research/">Research</a><a href="../applications/">Applications</a><a href="../experiments/">Experiments</a><a href="../patents/">Patents</a><a href="../index.html#contact">Contact</a>
+</nav></div></header>
+<main class="experiment-detail"><div class="container">
+<p class="eyebrow">EXPERIMENT RECORD</p>
+<div class="experiment-card">
+<div class="experiment-id">WEB-EXP-009</div>
+<h1>Dense DOM Spatial Distribution Failure Benchmark</h1>
+<div class="experiment-meta">Evidence: [E] Documented Failure · Status: Completed · Date: 2026-09-13</div>
+<p>Failure analysis of individual DOM-node mounting under a dense spatial distribution.</p>
+<div class="falsification-warning"><strong>Falsification / failure record:</strong> FAILURE RECORD: individual DOM nodes became a bottleneck under the tested dense spatial distribution. This result is preserved as evidence against the implementation under those conditions.</div>
+<section><h2>Reported result</h2><table class="metric-table"><tr><th>frame_delta_ms</th><td>161.01</td></tr>
+<tr><th>fps</th><td>6.2</td></tr>
+<tr><th>jank_percent</th><td>76.2</td></tr></table></section>
+<section><h2>Interpretation</h2><p>The reported run documents a severe browser-layout failure mode for individually mounted DOM nodes under the tested dense spatial distribution.</p></section>
+<section><h2>Limitations</h2><ul><li>The result describes the tested DOM implementation and workload.</li>
+<li>The failure result should not be generalized to all DOM workloads.</li>
+<li>This record is intentionally retained as negative evidence rather than omitted.</li></ul></section>
+
+</div></div></main>
+<footer><div class="container footer-content"><span>© 2026 UPA Research</span><span>Universal Pattern Application</span></div></footer>
+</body></html>

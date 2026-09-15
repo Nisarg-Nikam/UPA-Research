@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GPU Canvas2D Hardware Blitting Virtualizer Benchmark — UPA Research experiment record.">
+<title>WEB-EXP-010 — UPA Research</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.experiment-detail{padding:56px 0 80px}.experiment-detail .container{max-width:900px}
+.experiment-card{background:#fff;border:1px solid #d9e0e7;border-radius:10px;padding:32px;box-shadow:0 8px 24px rgba(15,35,55,.06)}
+.experiment-id{font:600 .8rem ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em;color:#2f5f86}
+.experiment-meta{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#52606d;margin:14px 0 24px}
+.metric-table{width:100%;border-collapse:collapse;margin:14px 0 22px;font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
+.metric-table th,.metric-table td{border:1px solid #d9e0e7;padding:8px;text-align:left}.metric-table th{width:38%;background:#f4f7fa}
+.falsification-warning{margin:24px 0;padding:16px 18px;border-left:4px solid #8a4b08;background:#fff7ed}
+section{margin-top:30px}.note{color:#52606d;font-size:.9rem}
+</style>
+<script src="../js/responsive.js" defer></script>
+</head>
+<body>
+<header><div class="container"><a class="brand" href="../index.html">UPA Research</a><nav>
+<a href="../index.html">Home</a><a href="../research/">Research</a><a href="../applications/">Applications</a><a href="../experiments/">Experiments</a><a href="../patents/">Patents</a><a href="../index.html#contact">Contact</a>
+</nav></div></header>
+<main class="experiment-detail"><div class="container">
+<p class="eyebrow">EXPERIMENT RECORD</p>
+<div class="experiment-card">
+<div class="experiment-id">WEB-EXP-010</div>
+<h1>GPU Canvas2D Hardware Blitting Virtualizer Benchmark</h1>
+<div class="experiment-meta">Evidence: [B] Hardware Benchmark · Status: Completed · Date: 2026-09-13</div>
+<p>Hardware benchmark of a Canvas2D blitting virtualizer using a locked 16.67 ms frame interval.</p>
+
+<section><h2>Reported result</h2><table class="metric-table"><tr><th>frame_delta_ms</th><td>16.67</td></tr>
+<tr><th>fps</th><td>60</td></tr>
+<tr><th>spatial_query_ms</th><td>0.897</td></tr>
+<tr><th>severe_jank_ms</th><td>0</td></tr></table></section>
+<section><h2>Interpretation</h2><p>The reported benchmark demonstrates stable 60.0 FPS operation under the stated Canvas2D hardware-blitting test conditions, with 0.897 ms spatial-query latency and 0 ms severe jank.</p></section>
+<section><h2>Limitations</h2><ul><li>The result is specific to the tested browser, hardware, implementation, and workload.</li>
+<li>60 FPS stability in this benchmark is not a general browser or hardware capacity guarantee.</li>
+<li>The exact raw execution log is not included by this setup script.</li></ul></section>
+<section>
+<h2>Published result exports</h2>
+<p>These files contain the benchmark values published in the registry. They are <strong>result exports, not raw execution logs</strong>.</p>
+<ul>
+<li><a href="../data/benchmarks/WEB-EXP-010.json">JSON result export</a></li>
+<li><a href="../data/benchmarks/WEB-EXP-010.csv">CSV result export</a></li>
+</ul>
+<p class="note">Raw logs are not represented here unless the original execution-log files are supplied.</p>
+</section>
+</div></div></main>
+<footer><div class="container footer-content"><span>© 2026 UPA Research</span><span>Universal Pattern Application</span></div></footer>
+</body></html>

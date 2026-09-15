@@ -1,48 +1,98 @@
-﻿{
-  "title": "UPA Research",
-  "description": "Research organized through the UPA Grid for traceability, segmentation, and cross-linking.",
-  "projects": [
-    {
-      "id": "upa-core",
-      "name": "UPA Core",
-      "category": "Research Architecture",
-      "status": "Research Active",
-      "summary": "The conceptual and methodological foundation of Universal Pattern Application, including parametric representation, pattern matching, structured state spaces, and traceable application workflows.",
-      "evidence": "Framework / conceptual research",
-      "links": {
-        "experiments": [],
-        "applications": [],
-        "publications": [],
-        "patents": []
-      }
-    },
-    {
-      "id": "pag",
-      "name": "PAG — Pattern Atlas Generator",
-      "category": "Computational Research",
-      "status": "Development Active",
-      "summary": "A research platform for generating, detecting, analyzing, and cataloguing recurring arithmetic and digit patterns to build a Pattern Atlas.",
-      "evidence": "Computational research platform",
-      "links": {
-        "experiments": [],
-        "applications": [],
-        "publications": [],
-        "patents": []
-      }
-    },
-    {
-      "id": "paal",
-      "name": "PAAL — Pattern-Adaptive Arithmetic Library",
-      "category": "Computational Research",
-      "status": "Research / Development",
-      "summary": "A proposed arithmetic-library approach that identifies structured numerical families and uses exact formulas or compact lookup structures where appropriate.",
-      "evidence": "Concept / computational research",
-      "links": {
-        "experiments": [],
-        "applications": [],
-        "publications": [],
-        "patents": []
-      }
-    }
-  ]
+{
+    "title":  "UPA Research",
+    "description":  "Research organized through the UPA Grid for traceability, segmentation, and cross-linking.",
+    "projects":  [
+                     {
+                         "id":  "upa-core",
+                         "name":  "UPA Core",
+                         "category":  "Research Architecture",
+                         "status":  "Research Active",
+                         "summary":  "The conceptual and methodological foundation of Universal Pattern Application, including parametric representation, pattern matching, structured state spaces, and traceable application workflows.",
+                         "evidence":  "Framework / conceptual research",
+                         "links":  {
+                                       "experiments":  [
+
+                                                       ],
+                                       "applications":  [
+
+                                                        ],
+                                       "publications":  [
+
+                                                        ],
+                                       "patents":  [
+
+                                                   ]
+                                   }
+                     },
+                     {
+                         "id":  "pag",
+                         "name":  "PAG — Pattern Atlas Generator",
+                         "category":  "Computational Research",
+                         "status":  "Development Active",
+                         "summary":  "A research platform for generating, detecting, analyzing, and cataloguing recurring arithmetic and digit patterns to build a Pattern Atlas.",
+                         "evidence":  "Computational research platform",
+                         "links":  {
+                                       "experiments":  [
+
+                                                       ],
+                                       "applications":  [
+
+                                                        ],
+                                       "publications":  [
+
+                                                        ],
+                                       "patents":  [
+
+                                                   ]
+                                   }
+                     },
+                     {
+                         "id":  "paal",
+                         "name":  "PAAL — Pattern-Adaptive Arithmetic Library",
+                         "category":  "Computational Research",
+                         "status":  "Research / Development",
+                         "summary":  "A proposed arithmetic-library approach that identifies structured numerical families and uses exact formulas or compact lookup structures where appropriate.",
+                         "evidence":  "Concept / computational research",
+                         "links":  {
+                                       "experiments":  [
+
+                                                       ],
+                                       "applications":  [
+
+                                                        ],
+                                       "publications":  [
+
+                                                        ],
+                                       "patents":  [
+
+                                                   ]
+                                   }
+                     }
+                 ],
+    "research_domains":  [
+                             {
+                                 "id":  "applied-mathematics",
+                                 "name":  "Applied Mathematics",
+                                 "tag":  "[A] Established PoU Interpolation Bounds",
+                                 "description":  "Mathematical research area tracked through explicit evidence status."
+                             },
+                             {
+                                 "id":  "spatial-indexing",
+                                 "name":  "Spatial Indexing \u0026 CUDA",
+                                 "tag":  "[B] Hardware-Validated Hybrid Engine",
+                                 "description":  "Computational and hardware-oriented research on spatial indexing and rendering workloads."
+                             },
+                             {
+                                 "id":  "acoustic-basket",
+                                 "name":  "Acoustic Basket Geometry",
+                                 "tag":  "[C] FEA Modal Resonance Simulation",
+                                 "description":  "Simulation-oriented acoustic geometry research; the tag denotes simulation evidence rather than hardware validation."
+                             },
+                             {
+                                 "id":  "parametric-pulse",
+                                 "name":  "Parametric Pulse Extraction",
+                                 "tag":  "[D] Orthogonal Subspace Hypothesis",
+                                 "description":  "Hypothesis-stage research concerning parametric pulse extraction and orthogonal subspace structure."
+                             }
+                         ]
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Experiments",
     "description":  "Experiments and studies are organized by evidence type so that computational, simulated, and hardware results remain explicitly distinguishable.",
     "evidence_types":  [
@@ -92,6 +92,127 @@
                                             "The test targeted the homepage only and did not exercise the visitor-counter API or D1 writes.",
                                             "Results describe this test run and should not be treated as a general capacity guarantee."
                                         ]
+                    },
+                    {
+                        "id":  "WEB-EXP-008",
+                        "title":  "Hybrid Spatial Index Boundary Query Benchmark",
+                        "type":  "hardware",
+                        "status":  "Completed",
+                        "date":  "2026-09-13",
+                        "evidence_class":  "[B] Hardware Benchmark",
+                        "description":  "Hardware benchmark of a boundary query using a Mulberry32 pseudo-random sequence with seed 424242 and N=100,000.",
+                        "method":  {
+                                       "generator":  "Mulberry32 PRNG",
+                                       "seed":  424242,
+                                       "candidate_count":  100000,
+                                       "boundary_query_ms":  0.481,
+                                       "note":  "Published metrics are the supplied benchmark result; raw execution logs are not included by this setup script."
+                                   },
+                        "results":  [
+                                        {
+                                            "candidate_count":  100000,
+                                            "boundary_query_ms":  0.481,
+                                            "operating_window":  "K ∈ [32, 256]"
+                                        }
+                                    ],
+                        "interpretation":  "The reported result supports the hypothesis that sub-tree promotion can avoid candidate-array scanning bottlenecks under the tested conditions.",
+                        "limitations":  [
+                                            "The result is specific to the reported implementation and test conditions.",
+                                            "A benchmark result is not a universal performance guarantee.",
+                                            "The operating window K ∈ [32, 256] is reported as an observed benchmark window, not a theorem.",
+                                            "True raw execution logs must be supplied separately if external reviewers are to reproduce the exact run trace."
+                                        ],
+                        "links":  {
+                                      "research":  [
+                                                       "spatial-indexing"
+                                                   ],
+                                      "applications":  [
+                                                           "computing-vlsi"
+                                                       ],
+                                      "experiments":  [
+
+                                                      ]
+                                  }
+                    },
+                    {
+                        "id":  "WEB-EXP-009",
+                        "title":  "Dense DOM Spatial Distribution Failure Benchmark",
+                        "type":  "computational",
+                        "status":  "Completed",
+                        "date":  "2026-09-13",
+                        "evidence_class":  "[E] Documented Failure",
+                        "description":  "Failure analysis of individual DOM-node mounting under a dense spatial distribution.",
+                        "method":  {
+                                       "frame_delta_ms":  161.01,
+                                       "fps":  6.2,
+                                       "jank_percent":  76.2
+                                   },
+                        "results":  [
+                                        {
+                                            "frame_delta_ms":  161.01,
+                                            "fps":  6.2,
+                                            "jank_percent":  76.2
+                                        }
+                                    ],
+                        "interpretation":  "The reported run documents a severe browser-layout failure mode for individually mounted DOM nodes under the tested dense spatial distribution.",
+                        "limitations":  [
+                                            "The result describes the tested DOM implementation and workload.",
+                                            "The failure result should not be generalized to all DOM workloads.",
+                                            "This record is intentionally retained as negative evidence rather than omitted."
+                                        ],
+                        "falsification_warning":  "FAILURE RECORD: individual DOM nodes became a bottleneck under the tested dense spatial distribution. This result is preserved as evidence against the implementation under those conditions.",
+                        "links":  {
+                                      "research":  [
+                                                       "spatial-indexing"
+                                                   ],
+                                      "applications":  [
+                                                           "computing-vlsi"
+                                                       ],
+                                      "experiments":  [
+
+                                                      ]
+                                  }
+                    },
+                    {
+                        "id":  "WEB-EXP-010",
+                        "title":  "GPU Canvas2D Hardware Blitting Virtualizer Benchmark",
+                        "type":  "hardware",
+                        "status":  "Completed",
+                        "date":  "2026-09-13",
+                        "evidence_class":  "[B] Hardware Benchmark",
+                        "description":  "Hardware benchmark of a Canvas2D blitting virtualizer using a locked 16.67 ms frame interval.",
+                        "method":  {
+                                       "renderer":  "GPU Canvas2D",
+                                       "frame_delta_ms":  16.67,
+                                       "target_fps":  60,
+                                       "spatial_query_ms":  0.897,
+                                       "severe_jank_ms":  0
+                                   },
+                        "results":  [
+                                        {
+                                            "frame_delta_ms":  16.67,
+                                            "fps":  60,
+                                            "spatial_query_ms":  0.897,
+                                            "severe_jank_ms":  0
+                                        }
+                                    ],
+                        "interpretation":  "The reported benchmark demonstrates stable 60.0 FPS operation under the stated Canvas2D hardware-blitting test conditions, with 0.897 ms spatial-query latency and 0 ms severe jank.",
+                        "limitations":  [
+                                            "The result is specific to the tested browser, hardware, implementation, and workload.",
+                                            "60 FPS stability in this benchmark is not a general browser or hardware capacity guarantee.",
+                                            "The exact raw execution log is not included by this setup script."
+                                        ],
+                        "links":  {
+                                      "research":  [
+                                                       "spatial-indexing"
+                                                   ],
+                                      "applications":  [
+                                                           "computing-vlsi"
+                                                       ],
+                                      "experiments":  [
+
+                                                      ]
+                                  }
                     }
                 ]
 }

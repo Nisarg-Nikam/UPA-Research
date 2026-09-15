@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+?<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UPA Research experiments — simulations, computational studies, and hardware validation.">
-    <title>Experiments — UPA Research</title>
+    <meta name="description" content="UPA Research experiments �?" simulations, computational studies, and hardware validation.">
+    <title>Experiments �?" UPA Research</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .experiments-page { padding: 56px 0 80px; }
@@ -29,7 +29,167 @@
         .record-limitations ul { margin-bottom: 0; }
         .records-empty { margin-top: 42px; padding: 22px 24px; background: #fff; border: 1px dashed #b9c7d4; border-radius: 10px; color: #465665; }
         .evidence-note { margin-top: 42px; padding: 20px 24px; border-left: 4px solid #2f5f86; background: #f4f7fa; }
-    </style>
+    .experiment-record-links{padding:0 0 56px}.record-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.record-link-grid a{display:block;padding:18px;background:#fff;border:1px solid #d9e0e7;border-radius:8px;text-decoration:none}.record-link-grid strong{display:block;font:600 11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#2f5f86;margin-bottom:7px}.record-link-grid span{color:#17212b}
+</style>
+<style id="upa-experiment-responsive-metrics">
+/* UPA Experiments responsive metric panels v1.0 */
+
+.upa-metric-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 14px 0 4px;
+}
+
+.upa-metric {
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #d9e0e7;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+.upa-metric-label {
+    display: block;
+    margin-bottom: 5px;
+    font: 600 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+    color: #5c6b78;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    overflow-wrap: anywhere;
+}
+
+.upa-metric-value {
+    display: block;
+    font: 700 20px ui-monospace, SFMono-Regular, Consolas, monospace;
+    color: #0b1120;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.upa-metric-note {
+    margin-top: 12px;
+    font-size: .85rem;
+    color: #5c6b78;
+}
+
+@media (max-width: 600px) {
+    .upa-metric-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .upa-metric {
+        padding: 11px 12px;
+    }
+
+    .upa-metric-value {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .upa-metric-panel {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<style id="upa-experiment-metric-v11">
+/* UPA Experiments metric presentation v1.1 */
+
+.upa-result-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin: 12px 0 8px;
+}
+
+.upa-result-metric {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d9e0e7;
+    background: #f8fafc;
+}
+
+.upa-result-metric-label {
+    display: block;
+    margin-bottom: 6px;
+    font: 600 10px ui-monospace, SFMono-Regular, Consolas, monospace;
+    color: #5c6b78;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    overflow-wrap: anywhere;
+}
+
+.upa-result-metric-value {
+    display: block;
+    font: 700 20px/1.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+    color: #0b1120;
+    overflow-wrap: anywhere;
+}
+
+.upa-result-note {
+    margin: 12px 0 0;
+    color: #334155;
+}
+
+@media (max-width: 700px) {
+    .upa-result-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .upa-result-metric {
+        padding: 12px;
+    }
+
+    .upa-result-metric-value {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .upa-result-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<style id="upa-final-result-dedupe">
+/* Hide the obsolete generic result rows below the adaptive metric panels. */
+.record-card .upa-result-metrics ~ .record-details {
+    display: none;
+}
+</style>
+<style id="upa-final-responsive-exp-v18">
+/* UPA final experiment-result cleanup v1.8 */
+
+.record-card .upa-result-metrics {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.record-card .upa-result-metrics ~ .record-details {
+    display: none !important;
+}
+
+.upa-result-note {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .upa-result-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .upa-result-metrics {
+        grid-template-columns: 1fr !important;
+    }
+}
+</style>
+<script src="../js/responsive.js" defer></script>
 </head>
 <body>
 <header>
@@ -65,6 +225,16 @@
             <strong>Evidence discipline:</strong> simulation, model-derived results, computational studies, hardware experiments, and independent validation are identified separately wherever applicable.
         </div>
     </div>
+<section class="experiment-record-links">
+<div class="container">
+<h2>Published benchmark records</h2>
+<div class="record-link-grid">
+<a href="WEB-EXP-008.html"><strong>WEB-EXP-008</strong><span>Hybrid Spatial Index Boundary Query</span></a>
+<a href="WEB-EXP-009.html"><strong>WEB-EXP-009</strong><span>Dense DOM Failure Benchmark</span></a>
+<a href="WEB-EXP-010.html"><strong>WEB-EXP-010</strong><span>GPU Canvas2D Hardware Benchmark</span></a>
+</div>
+</div>
+</section>
 </main>
 
 <footer>
@@ -84,6 +254,7 @@ fetch("../data/experiments.json", { cache: "no-store" })
         document.getElementById("experiments-description").textContent = data.description || "";
 
         const grid = document.getElementById("evidence-grid");
+
         (data.evidence_types || []).forEach(type => {
             const card = document.createElement("article");
             card.className = "evidence-card";
@@ -107,73 +278,162 @@ fetch("../data/experiments.json", { cache: "no-store" })
             return;
         }
 
+        function humanizeKey(key) {
+            return String(key)
+                .replace(/_/g, " ")
+                .replace(/\b\w/g, char => char.toUpperCase());
+        }
+
+        function formatValue(value) {
+            if (value === null || value === undefined || value === "") return "�?"";
+            return String(value);
+        }
+
+        function renderMethod(method) {
+            if (!method || typeof method !== "object") {
+                return "<p>�?"</p>";
+            }
+
+            return `
+                <dl class="record-details">
+                    ${Object.entries(method)
+                        .map(([key, value]) => `
+                            <dt>${humanizeKey(key)}</dt>
+                            <dd>${formatValue(value)}</dd>
+                        `)
+                        .join("")}
+                </dl>
+            `;
+        }
+
+        function renderResults(results) {
+            if (!Array.isArray(results) || !results.length) {
+                return "<p>�?"</p>";
+            }
+
+            // Preserve the wide comparison table for records with a shared schema
+            // such as the website HTTP load benchmark.
+            const keys = [...new Set(results.flatMap(result => Object.keys(result || {})))];
+
+            if (!keys.length) return "<p>�?"</p>";
+
+            const httpKeys = [
+                "concurrent_clients",
+                "total_requests",
+                "http_200",
+                "failures",
+                "throughput_req_per_sec",
+                "average_latency_sec",
+                "maximum_latency_sec"
+            ];
+
+            const isHttpBenchmark = httpKeys.every(key => keys.includes(key));
+
+            if (isHttpBenchmark) {
+                const labels = {
+                    concurrent_clients: "Clients",
+                    total_requests: "Requests",
+                    http_200: "HTTP 200",
+                    failures: "Failures",
+                    throughput_req_per_sec: "Req/s",
+                    average_latency_sec: "Avg s",
+                    maximum_latency_sec: "Max s"
+                };
+
+                return `
+                    <div class="results-table-wrap">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    ${httpKeys.map(key => `<th>${labels[key]}</th>`).join("")}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${results.map(result => `
+                                    <tr>
+                                        ${httpKeys.map(key => `<td>${formatValue(result[key])}</td>`).join("")}
+                                    </tr>
+                                `).join("")}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+
+            // Generic responsive metric cards for hardware/computational results.
+            return `
+                <div class="result-metrics">
+                    ${results.map((result, index) => `
+                        <div class="result-metric-set">
+                            ${results.length > 1 ? `<div class="metric-set-label">Result ${index + 1}</div>` : ""}
+                            <dl class="record-details">
+                                ${Object.entries(result || {})
+                                    .map(([key, value]) => `
+                                        <dt>${humanizeKey(key)}</dt>
+                                        <dd><strong>${formatValue(value)}</strong></dd>
+                                    `)
+                                    .join("")}
+                            </dl>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+        }
+
         data.records.forEach(record => {
             const card = document.createElement("article");
             card.className = "record-card";
 
-            const resultsRows = (record.results || []).map(result => `
-                <tr>
-                    <td>${result.concurrent_clients ?? "—"}</td>
-                    <td>${result.total_requests ?? "—"}</td>
-                    <td>${result.http_200 ?? "—"}</td>
-                    <td>${result.failures ?? "—"}</td>
-                    <td>${result.throughput_req_per_sec ?? "—"}</td>
-                    <td>${result.average_latency_sec ?? "—"}</td>
-                    <td>${result.maximum_latency_sec ?? "—"}</td>
-                </tr>
-            `).join("");
-
             const limitations = (record.limitations || [])
                 .map(item => `<li>${item}</li>`)
                 .join("");
+
+            const failureWarning = record.falsification_warning
+                ? `<div class="falsification-warning"><strong>${record.falsification_warning}</strong></div>`
+                : "";
+
+            const benchmarkLinks = record.id === "WEB-EXP-008" || record.id === "WEB-EXP-010"
+                ? `
+                    <div class="record-data-links">
+                        <strong>Published result exports:</strong>
+                        <a href="../data/benchmarks/${record.id}.json">JSON</a>
+                        <a href="../data/benchmarks/${record.id}.csv">CSV</a>
+                        <span>These are published result values, not raw execution logs.</span>
+                    </div>
+                `
+                : "";
 
             card.innerHTML = `
                 <div class="record-id">${record.id || "Experiment"}</div>
                 <h2>${record.title || "Untitled experiment"}</h2>
 
                 <div class="record-meta">
-                    <span><strong>Type:</strong> ${record.type || "—"}</span>
-                    <span><strong>Status:</strong> ${record.status || "—"}</span>
-                    <span><strong>Date:</strong> ${record.date || "—"}</span>
-                    <span><strong>Evidence:</strong> ${record.evidence_class || "—"}</span>
+                    <span><strong>Type:</strong> ${record.type || "�?""}</span>
+                    <span><strong>Status:</strong> ${record.status || "�?""}</span>
+                    <span><strong>Date:</strong> ${record.date || "�?""}</span>
+                    <span><strong>Evidence:</strong> ${record.evidence_class || "�?""}</span>
                 </div>
 
                 <p>${record.description || ""}</p>
 
                 <h3>Method</h3>
-                <dl class="record-details">
-                    <dt>Target</dt><dd>${record.method?.target || "—"}</dd>
-                    <dt>Scope</dt><dd>${record.method?.scope || "—"}</dd>
-                    <dt>Client model</dt><dd>${record.method?.client_model || "—"}</dd>
-                    <dt>Requests per client</dt><dd>${record.method?.requests_per_client ?? "—"}</dd>
-                </dl>
+                ${renderMethod(record.method)}
 
                 <h3>Observed results</h3>
-                <div class="results-table-wrap">
-                    <table class="results-table">
-                        <thead>
-                            <tr>
-                                <th>Clients</th>
-                                <th>Requests</th>
-                                <th>HTTP 200</th>
-                                <th>Failures</th>
-                                <th>Req/s</th>
-                                <th>Avg s</th>
-                                <th>Max s</th>
-                            </tr>
-                        </thead>
-                        <tbody>${resultsRows}</tbody>
-                    </table>
-                </div>
+                ${renderResults(record.results)}
+
+                ${failureWarning}
 
                 <p class="record-interpretation">
-                    <strong>Interpretation:</strong> ${record.interpretation || "—"}
+                    <strong>Interpretation:</strong> ${record.interpretation || "�?""}
                 </p>
 
                 <div class="record-limitations">
                     <h3>Limitations</h3>
                     <ul>${limitations}</ul>
                 </div>
+
+                ${benchmarkLinks}
             `;
 
             records.appendChild(card);
@@ -183,6 +443,307 @@ fetch("../data/experiments.json", { cache: "no-store" })
         document.getElementById("evidence-grid").innerHTML =
             "<p>Experiments data is temporarily unavailable.</p>";
     });
+</script>
+<script id="upa-experiment-responsive-metrics-script">
+// UPA Experiments responsive metric panels v1.0
+
+(function () {
+    const records = {
+        "WEB-EXP-008": {
+            title: "Hybrid Spatial Index Boundary Query Benchmark",
+            metrics: [
+                ["Candidate count", "100,000"],
+                ["Boundary query", "0.481 ms"],
+                ["Operating window", "K in [32, 256]"],
+                ["PRNG", "Mulberry32"],
+                ["Seed", "424242"]
+            ],
+            note: "Observed benchmark result under the stated test conditions."
+        },
+
+        "WEB-EXP-009": {
+            title: "Dense DOM Spatial Distribution Failure Benchmark",
+            metrics: [
+                ["Frame delta", "161.01 ms"],
+                ["Frame rate", "6.2 FPS"],
+                ["Jank", "76.2%"]
+            ],
+            note: "Documented failure retained as negative evidence; it should not be generalized to every DOM workload."
+        },
+
+        "WEB-EXP-010": {
+            title: "GPU Canvas2D Hardware Blitting Virtualizer Benchmark",
+            metrics: [
+                ["Frame delta", "16.67 ms"],
+                ["Frame rate", "60.0 FPS"],
+                ["Spatial query", "0.897 ms"],
+                ["Severe jank", "0 ms"]
+            ],
+            note: "Observed benchmark result under the stated Canvas2D hardware-blitting test conditions."
+        }
+    };
+
+    function findRecordContainer(id) {
+        const nodes = document.querySelectorAll("main *");
+
+        for (const node of nodes) {
+            if (node.children.length === 0 &&
+                node.textContent.trim().indexOf(id) !== -1) {
+
+                let current = node;
+
+                for (let level = 0; level < 8 && current; level++) {
+                    if (
+                        current.querySelector &&
+                        current.querySelector(".results-table-wrap")
+                    ) {
+                        return current;
+                    }
+
+                    current = current.parentElement;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    function makeMetricPanel(record) {
+        const panel = document.createElement("div");
+        panel.className = "upa-metric-panel";
+        panel.setAttribute("role", "list");
+
+        record.metrics.forEach(function (item) {
+            const box = document.createElement("div");
+            box.className = "upa-metric";
+            box.setAttribute("role", "listitem");
+
+            const label = document.createElement("span");
+            label.className = "upa-metric-label";
+            label.textContent = item[0];
+
+            const value = document.createElement("span");
+            value.className = "upa-metric-value";
+            value.textContent = item[1];
+
+            box.appendChild(label);
+            box.appendChild(value);
+            panel.appendChild(box);
+        });
+
+        const note = document.createElement("div");
+        note.className = "upa-metric-note";
+        note.textContent = record.note;
+
+        return { panel: panel, note: note };
+    }
+
+    function applyRecord(id, record) {
+        const container = findRecordContainer(id);
+
+        if (!container || container.dataset.upaMetricsApplied === "1") {
+            return !!container;
+        }
+
+        const table = container.querySelector(".results-table-wrap");
+
+        if (!table) {
+            return false;
+        }
+
+        const built = makeMetricPanel(record);
+        table.replaceWith(built.panel);
+
+        built.panel.insertAdjacentElement("afterend", built.note);
+
+        container.dataset.upaMetricsApplied = "1";
+        return true;
+    }
+
+    function applyAll() {
+        let changed = false;
+
+        Object.keys(records).forEach(function (id) {
+            if (applyRecord(id, records[id])) {
+                changed = true;
+            }
+        });
+
+        return changed;
+    }
+
+    function run() {
+        applyAll();
+
+        // The page loads experiment records from JSON. Re-check briefly
+        // until those records have been rendered.
+        let attempts = 0;
+
+        const timer = setInterval(function () {
+            attempts += 1;
+            applyAll();
+
+            if (attempts >= 30) {
+                clearInterval(timer);
+            }
+        }, 200);
+    }
+
+    window.addEventListener("load", run);
+})();
+</script>
+<script id="upa-experiment-metric-v11-script">
+/* UPA Experiments metric presentation v1.1 */
+
+(function () {
+    const records = {
+        "WEB-EXP-008": {
+            metrics: [
+                ["Candidate count", "100,000"],
+                ["Boundary query", "0.481 ms"],
+                ["Operating window", "K in [32, 256]"],
+                ["PRNG", "Mulberry32"],
+                ["Seed", "424242"]
+            ],
+            note: "Published benchmark result. The result supports the sub-tree-promotion hypothesis under the tested conditions."
+        },
+
+        "WEB-EXP-009": {
+            metrics: [
+                ["Frame delta", "161.01 ms"],
+                ["Frame rate", "6.2 FPS"],
+                ["Jank", "76.2%"]
+            ],
+            note: "Documented failure retained as negative evidence. It describes the tested dense DOM workload and is not generalized to all DOM workloads."
+        },
+
+        "WEB-EXP-010": {
+            metrics: [
+                ["Frame delta", "16.67 ms"],
+                ["Frame rate", "60.0 FPS"],
+                ["Spatial query", "0.897 ms"],
+                ["Severe jank", "0 ms"]
+            ],
+            note: "Published hardware benchmark result under the stated Canvas2D blitting test conditions."
+        }
+    };
+
+    function findCard(id) {
+        const elements = document.querySelectorAll("main *");
+
+        for (const el of elements) {
+            if (el.children.length === 0 && el.textContent.trim() === id) {
+                let card = el.closest(".record-card");
+                if (card) {
+                    return card;
+                }
+
+                card = el.parentElement;
+                for (let i = 0; i < 8 && card; i++, card = card.parentElement) {
+                    if (card.classList && card.classList.contains("record-card")) {
+                        return card;
+                    }
+                }
+            }
+        }
+
+        return null;
+    }
+
+    function findHeading(card, text) {
+        return Array.from(card.querySelectorAll("h2,h3,h4")).find(function (heading) {
+            return heading.textContent.trim().toLowerCase() === text.toLowerCase();
+        });
+    }
+
+    function buildMetrics(record) {
+        const wrap = document.createElement("div");
+        wrap.className = "upa-result-metrics";
+        wrap.setAttribute("role", "list");
+
+        record.metrics.forEach(function (item) {
+            const metric = document.createElement("div");
+            metric.className = "upa-result-metric";
+            metric.setAttribute("role", "listitem");
+
+            const label = document.createElement("span");
+            label.className = "upa-result-metric-label";
+            label.textContent = item[0];
+
+            const value = document.createElement("span");
+            value.className = "upa-result-metric-value";
+            value.textContent = item[1];
+
+            metric.appendChild(label);
+            metric.appendChild(value);
+            wrap.appendChild(metric);
+        });
+
+        const note = document.createElement("p");
+        note.className = "upa-result-note";
+        note.textContent = record.note;
+
+        const fragment = document.createDocumentFragment();
+        fragment.appendChild(wrap);
+        fragment.appendChild(note);
+        return fragment;
+    }
+
+    function replaceObservedResults(id, record) {
+        const card = findCard(id);
+        if (!card || card.dataset.upaMetricV11 === "1") {
+            return;
+        }
+
+        const heading = findHeading(card, "Observed results");
+        if (!heading) {
+            return;
+        }
+
+        // The experiment renderer places the result details immediately after
+        // the heading. Remove only that generic result block.
+        let next = heading.nextElementSibling;
+
+        if (next && (
+            next.classList.contains("record-details") ||
+            next.classList.contains("results-table-wrap") ||
+            next.classList.contains("results-table")
+        )) {
+            next.remove();
+        }
+
+        // Remove an immediately following generic interpretation duplicate
+        // only when it is a standalone duplicate of the result block.
+        const fragment = buildMetrics(record);
+        heading.insertAdjacentElement("afterend", document.createElement("span"));
+        const marker = heading.nextElementSibling;
+        marker.replaceWith(fragment);
+
+        card.dataset.upaMetricV11 = "1";
+    }
+
+    function apply() {
+        Object.keys(records).forEach(function (id) {
+            replaceObservedResults(id, records[id]);
+        });
+    }
+
+    function start() {
+        apply();
+
+        let attempts = 0;
+        const timer = setInterval(function () {
+            apply();
+            attempts += 1;
+
+            if (attempts >= 40) {
+                clearInterval(timer);
+            }
+        }, 150);
+    }
+
+    window.addEventListener("load", start);
+})();
 </script>
 </body>
 </html>

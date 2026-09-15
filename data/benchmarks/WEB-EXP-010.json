@@ -1,0 +1,11 @@
+{
+    "benchmark_id":  "WEB-EXP-010",
+    "record_type":  "published benchmark result export",
+    "evidence_class":  "[B] Hardware Benchmark",
+    "renderer":  "GPU Canvas2D",
+    "frame_delta_ms":  16.67,
+    "fps":  60,
+    "spatial_query_ms":  0.897,
+    "severe_jank_ms":  0,
+    "raw_log_status":  "not included"
+}

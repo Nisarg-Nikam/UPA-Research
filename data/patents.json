@@ -8,14 +8,89 @@
       "jurisdiction": "India",
       "application_number": "202621100992",
       "filing_date": "2026-08-21",
+      "cbr_number": "36710",
+      "cbr_date": "2026-08-21",
       "status": "Filed",
       "type": "Ordinary Application — Provisional Specification",
       "public_disclosure": "Filed application metadata and high-level subject description",
       "summary": "A filed UPA-related patent application concerning an adaptive power-conversion architecture using parametric operating-surface based digital control.",
       "evidence_note": "Patent filing status is reported separately from research evidence and does not by itself establish technical performance.",
+      "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
       "links": {
         "research": ["upa-core"],
         "applications": ["power-control"],
+        "experiments": []
+      }
+    },
+    {
+      "id": "PAT-UPA-002",
+      "title": "Patent Application Record 202621098925",
+      "jurisdiction": "India",
+      "application_number": "202621098925",
+      "cbr_number": "35751",
+      "cbr_date": "2026-08-16",
+      "status": "Filed",
+      "public_disclosure": "Application and CBR metadata only",
+      "summary": "Indian patent application record identified in the applicant's IP India paid-forms history.",
+      "evidence_note": "The supplied evidence establishes the application reference and CBR payment record. No technical title, claims, abstract, or filing date beyond the CBR date is published here.",
+      "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
+      "links": {
+        "research": [],
+        "applications": [],
+        "experiments": []
+      }
+    },
+    {
+      "id": "PAT-UPA-003",
+      "title": "Patent Application Record 202621098923",
+      "jurisdiction": "India",
+      "application_number": "202621098923",
+      "cbr_number": "35750",
+      "cbr_date": "2026-08-16",
+      "status": "Filed",
+      "public_disclosure": "Application and CBR metadata only",
+      "summary": "Indian patent application record identified in the applicant's IP India paid-forms history.",
+      "evidence_note": "The supplied evidence establishes the application reference and CBR payment record. No technical title, claims, abstract, or filing date beyond the CBR date is published here.",
+      "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
+      "links": {
+        "research": [],
+        "applications": [],
+        "experiments": []
+      }
+    },
+    {
+      "id": "PAT-UPA-004",
+      "title": "Patent Application Record 202621097766",
+      "jurisdiction": "India",
+      "application_number": "202621097766",
+      "cbr_number": "35243",
+      "cbr_date": "2026-08-13",
+      "status": "Filed",
+      "public_disclosure": "Application and CBR metadata only",
+      "summary": "Indian patent application record identified in the applicant's IP India paid-forms history.",
+      "evidence_note": "The supplied evidence establishes the application reference and CBR payment record. No technical title, claims, abstract, or filing date beyond the CBR date is published here.",
+      "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
+      "links": {
+        "research": [],
+        "applications": [],
+        "experiments": []
+      }
+    },
+    {
+      "id": "PAT-UPA-005",
+      "title": "Patent Application Record 202621097150",
+      "jurisdiction": "India",
+      "application_number": "202621097150",
+      "cbr_number": "34973",
+      "cbr_date": "2026-08-12",
+      "status": "Filed",
+      "public_disclosure": "Application and CBR metadata only",
+      "summary": "Indian patent application record identified in the applicant's IP India paid-forms history.",
+      "evidence_note": "The supplied evidence establishes the application reference and CBR payment record. No technical title, claims, abstract, or filing date beyond the CBR date is published here.",
+      "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
+      "links": {
+        "research": [],
+        "applications": [],
         "experiments": []
       }
     }

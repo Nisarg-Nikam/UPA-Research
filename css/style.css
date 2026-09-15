@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --background: #f4f1ea;
     --surface: #ffffff;
     --surface-alt: #e9edf2;
@@ -356,40 +356,6 @@ footer {
     font-size: 13px;
 }
 
-/* ---------- Mobile ---------- */
-
-@media (max-width: 800px) {
-
-    .nav-container {
-        align-items: flex-start;
-        padding: 18px 0;
-        flex-direction: column;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-
-    .hero {
-        padding: 80px 0;
-    }
-
-    .cards,
-    .application-grid,
-    .status-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 70px 0;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-}
-
 /* ---------- Visitor Counter ---------- */
 
 .visitor-counter {
@@ -401,4 +367,268 @@ footer {
 .visitor-counter strong {
     color: #ffffff;
     font-variant-numeric: tabular-nums;
+}
+
+/* ---------- UPA Final Responsive System v2 ---------- */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    min-width: 0;
+}
+
+header > .container,
+.nav-container,
+header nav,
+nav {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.card,
+.status,
+.evidence-card,
+.research-card,
+.domain-card,
+.record-card,
+.patent-card,
+.application-card {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card p,
+.research-card h1,
+.research-card h2,
+.research-card h3,
+.research-card p,
+.domain-card h1,
+.domain-card h2,
+.domain-card h3,
+.domain-card p,
+.record-card h1,
+.record-card h2,
+.record-card h3,
+.record-card p,
+.patent-card h1,
+.patent-card h2,
+.patent-card h3,
+.patent-card p,
+.application-card h1,
+.application-card h2,
+.application-card h3,
+.application-card p {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.upa-fit-heading {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.cards,
+.application-grid,
+.status-grid,
+.evidence-grid,
+.research-grid,
+.domain-grid {
+    align-items: stretch;
+}
+
+.results-table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.results-table {
+    min-width: 0;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .container,
+    header > .container,
+    .nav-container {
+        width: min(100% - 28px, var(--max-width));
+        min-width: 0;
+    }
+
+    header > .container,
+    .nav-container {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .brand {
+        align-self: flex-start;
+        min-width: 0;
+    }
+
+    header nav,
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 9px 14px;
+    }
+
+    nav a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 56px 0 52px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    h1 {
+        font-size: clamp(38px, 11vw, 58px);
+        letter-spacing: -1.5px;
+    }
+
+    h2 {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    .cards,
+    .application-grid,
+    .status-grid,
+    .evidence-grid,
+    .research-grid,
+    .domain-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card,
+    .status,
+    .evidence-card,
+    .research-card,
+    .domain-card,
+    .record-card,
+    .patent-card {
+        padding: 20px;
+    }
+
+    .application-grid {
+        border-right: 1px solid var(--border);
+    }
+
+    .application-grid div {
+        min-width: 0;
+        padding: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    .record-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5px 0;
+    }
+
+    .record-details dt {
+        margin-top: 10px;
+    }
+
+    .record-details dd {
+        padding-bottom: 4px;
+    }
+
+    .record-meta {
+        gap: 8px 14px;
+    }
+
+    .results-table {
+        min-width: 620px;
+    }
+
+    .results-table th,
+    .results-table td {
+        white-space: normal;
+        word-break: break-word;
+        padding: 8px;
+    }
+
+    footer .footer-content {
+        width: min(100% - 28px, var(--max-width));
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .container,
+    header > .container,
+    .nav-container {
+        width: calc(100% - 24px);
+    }
+
+    nav {
+        gap: 8px 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-top: 48px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        text-align: center;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
 }

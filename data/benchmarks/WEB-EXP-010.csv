@@ -1,0 +1,2 @@
+﻿benchmark_id,evidence_class,renderer,frame_delta_ms,fps,spatial_query_ms,severe_jank_ms,raw_log_status
+WEB-EXP-010,[B] Hardware Benchmark,GPU Canvas2D,16.67,60.0,0.897,0,not included
