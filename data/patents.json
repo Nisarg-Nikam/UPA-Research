@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "Patents",
   "description": "Public-facing patent information associated with UPA Research. Only filed or otherwise appropriate public metadata is presented here; unpublished technical details are not disclosed.",
   "records": [
@@ -17,8 +17,12 @@
       "evidence_note": "Patent filing status is reported separately from research evidence and does not by itself establish technical performance.",
       "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
       "links": {
-        "research": ["upa-core"],
-        "applications": ["power-control"],
+        "research": [
+          "upa-core"
+        ],
+        "applications": [
+          "power-control"
+        ],
         "experiments": []
       }
     },
@@ -88,6 +92,25 @@
       "summary": "Indian patent application record identified in the applicant's IP India paid-forms history.",
       "evidence_note": "The supplied evidence establishes the application reference and CBR payment record. No technical title, claims, abstract, or filing date beyond the CBR date is published here.",
       "filing_evidence": "IP India paid-form / CBR record supplied by the applicant.",
+      "links": {
+        "research": [],
+        "applications": [],
+        "experiments": []
+      }
+    },
+    {
+      "id": "PAT-UPA-006",
+      "title": "Adaptive Hardware Squarer Architecture with Dynamic Clock Gating for Structured Operand Subspaces",
+      "jurisdiction": "India",
+      "application_number": "202621110829",
+      "filing_date": "2026-09-16",
+      "cbr_number": "41524",
+      "cbr_date": "2026-09-16",
+      "status": "Filed",
+      "public_disclosure": "Application and CBR metadata only",
+      "summary": "Indian patent application concerning an adaptive hardware squarer architecture with dynamic clock gating for structured operand subspaces.",
+      "evidence_note": "The supplied IP India G.A.R.6 receipt establishes the application reference, title, submission record, and CBR record. No unpublished claims or enabling technical details are disclosed here.",
+      "filing_evidence": "IP India G.A.R.6 receipt / CBR record supplied by the applicant.",
       "links": {
         "research": [],
         "applications": [],

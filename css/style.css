@@ -369,6 +369,16 @@ footer {
     font-variant-numeric: tabular-nums;
 }
 
+
+.patent-program-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.patent-program-link {
+    margin-top: 28px;
+}
+
 /* ---------- UPA Final Responsive System v2 ---------- */
 
 html,
