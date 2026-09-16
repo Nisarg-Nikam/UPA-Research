@@ -1,0 +1,17 @@
+# UPA Research cache policy
+# Keep benchmark exports reasonably cacheable while requiring revalidation.
+/data/benchmarks/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Research and registry data should update quickly after a deployment.
+/data/patents.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/data/research.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/data/applications.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/data/experiments.json
+  Cache-Control: public, max-age=60, must-revalidate
